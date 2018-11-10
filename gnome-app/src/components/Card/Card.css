@@ -1,0 +1,22 @@
+.Card__holder {
+  width: 100vw;
+  height: 30vh;
+  overflow: hidden;
+  vertical-align: middle;
+  margin-bottom: 5vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.Card__holder__name {
+  padding: 2%;
+  width: 100vw;
+  height: 10vh;
+  background-color: black;
+  position: relative;
+  top: 20vh;
+  opacity: 0.5;
+  color: white;
+  font-size: 1.2em;
+}
