@@ -3,6 +3,7 @@ import Card from '../../components/Card';
 import Placeholder from '../../components/Placeholder';
 import { connect } from 'react-redux';
 import LazyLoad from 'react-lazyload';
+import { filteredGnomes } from '../../redux/selectors';
 import './Dashboard.css';
 
 class Dashboard extends Component {
@@ -12,53 +13,42 @@ class Dashboard extends Component {
     //reference to the container div to check for scroll position
     this.divRef = React.createRef();
 
-    //set states for array of gnomes and infinite scrolling number;
-    this.state = { gnomes: false, fetchNumber: 40 };
-  }
-
-  componentDidUpdate() {
-    //check if props arrived yet
-    if (this.state.gnomes === false) {
-      this.setState({ gnomes: this.props.gnomes.slice(0, 20) });
-    }
+    //set states for infinite scrolling number;
+    this.state = { fetchNumber: 20 };
   }
 
   fetchMore(ref) {
     // check if the scroll position is more than 80%, if so, add more
     // elements to the array
     if (ref.current.scrollTop / ref.current.scrollHeight > 0.8) {
-      this.setState({
-        gnomes: this.props.gnomes.slice(0, this.state.fetchNumber)
-      });
       let fetchNumber = this.state.fetchNumber + 20;
       this.setState({ fetchNumber });
     }
   }
 
   render() {
+    let gnomes = this.props.gnomes.slice(0, this.state.fetchNumber);
+    console.log(this.props.gnomes.length);
+
     return (
       <div
         className="Dashboard"
         ref={this.divRef}
         onScroll={() => this.fetchMore(this.divRef)}
       >
-        {this.state.gnomes ? (
-          this.state.gnomes.map(gnome => (
+        {gnomes.length ? (
+          gnomes.map(gnome => (
             <LazyLoad
               key={gnome.id}
               height={600}
               overflow={true}
               placeholder={<Placeholder />}
             >
-              <Card
-                key={gnome.id}
-                name={gnome.name}
-                thumbnail={gnome.thumbnail}
-              />
+              <Card key={gnome.id} gnome={gnome} />
             </LazyLoad>
           ))
         ) : (
-          <div>Nothing to show</div>
+          <div className="Dashboard__empty">Nothing to show!</div>
         )}
       </div>
     );
@@ -66,7 +56,7 @@ class Dashboard extends Component {
 }
 
 const mapStateToProps = state => ({
-  gnomes: state.gnomes
+  gnomes: filteredGnomes(state)
 });
 
 export default connect(mapStateToProps)(Dashboard);

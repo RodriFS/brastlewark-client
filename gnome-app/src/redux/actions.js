@@ -5,4 +5,14 @@ const getGnomes = payload => ({
   payload
 });
 
-export { getGnomes };
+const searchGnomes = payload => ({
+  type: types.SEARCH_GNOMES,
+  payload
+});
+
+const setFilter = payload => ({
+  type: types.SET_FILTER,
+  payload
+});
+
+export { getGnomes, searchGnomes, setFilter };

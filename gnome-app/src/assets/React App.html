@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="shortcut icon" href="http://localhost:3000/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  <style type="text/css">body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+</style><style type="text/css">.Navbar {
+  background-color: red;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.Navbar__title {
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  justify-self: center;
+}
+
+.Navbar__toMenu {
+  margin: 3%;
+  height: 2em;
+  justify-self: flex-start;
+}
+</style><style type="text/css">.Card {
+  box-shadow: -3px 3px 10px -2px rgba(0, 0, 0, 0.75);
+  margin: auto auto;
+  width: 90vw;
+  height: 46%;
+  margin: 2.5vh;
+  border-radius: 2vh;
+  overflow: hidden;
+}
+
+.Card__imgholder {
+  margin: auto;
+  height: 100px;
+  overflow: hidden;
+}
+
+.Card__imgholder img {
+  width: 90vw;
+  position: relative;
+  top: -50%;
+}
+
+.Card__holder {
+  padding: 2%;
+  width: 100vw;
+  height: 10vh;
+}
+
+.Card__holder__name {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.Card__holder__age,
+.Card__holder__weight,
+.Card__holder__height,
+.Card__holder__hair__text,
+.Card__holder__friends {
+  font-size: 0.8em;
+  width: 80%;
+}
+
+.Card__holder__hair {
+  display: flex;
+  flex-direction: row;
+}
+
+.Card__holder__hair__text {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.Card__holder__hair__color {
+  width: 1em;
+  margin-left: 5px;
+}
+
+.Card__holder__break {
+  border-bottom: solid 1px rgb(211, 211, 211);
+  margin-top: 5px;
+  width: 85vw;
+}
+
+.Card__holder__icons img {
+  width: 20px;
+  padding: 5px;
+}
+</style><style type="text/css">.Placeholder__image {
+  width: 100vw;
+}
+</style><style type="text/css">.Dashboard {
+  overflow: scroll;
+  height: 90vh;
+}
+
+.Dashboard__empty {
+  margin: 5vh;
+  text-align: center;
+  color: gray;
+  font-size: 1.5em;
+}
+</style><style type="text/css">.Search {
+  position: fixed;
+  top: 90vh;
+  height: 10vh;
+  left: 0vw;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  opacity: 1;
+  box-shadow: 0px 0px 64px 60px rgba(255, 255, 255, 1);
+}
+
+.Search__container img {
+  padding: 10px;
+  height: 2em;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.Search input {
+  padding: 5px 5px 5px 20px;
+  width: 60vw;
+  height: 2em;
+  border-radius: 2em;
+  outline: none;
+  border: solid 1px red;
+}
+</style><style type="text/css">.Filters {
+  overflow: scroll;
+  height: 100vh;
+}
+
+.Filters__button {
+  width: 100%;
+  height: 10vh;
+  font-size: 15px;
+  outline: none;
+  border: none;
+  vertical-align: middle;
+}
+
+.Filters__button__images {
+  height: 20px;
+}
+
+.Filter__filter {
+  width: 100%;
+  height: 5vh;
+  font-size: 20px;
+}
+</style><style type="text/css">.App {
+  height: 100vh;
+  overflow: hidden;
+}
+</style></head>
+  <body cz-shortcut-listen="true">
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root"><div class="App"><div class="DashboardContainer"><div class="Navbar"><img src="./React App_files/filter.deecb97c.svg" alt="to menu" class="Navbar__toMenu"><div class="Navbar__title">Gnomes</div></div><div class="Dashboard" data-lazyload-listened="20"><div class="Card"><div class="Card__imgholder"><img src="./React App_files/thinking-monkey-11282237747K8xB.jpg" alt="Tobus Quickwhistle"></div><div class="Card__holder"><div class="Card__holder__name">Tobus Quickwhistle</div><div class="Card__holder__age">Age: 306</div><div class="Card__holder__weight">Weight: 39.1 Kg</div><div class="Card__holder__height">Height: 1.08 m</div><div class="Card__holder__hair"><div class="Card__holder__hair__text">Hair color: </div><div class="Card__holder__hair__color" style="background-color: pink;"></div></div><div class="Card__holder__break"></div><div class="Card__holder__icons"><img src="./React App_files/Metalworker.a2bab202.svg" alt="Metalworker"><img src="./React App_files/Woodcarver.1ea83652.svg" alt="Woodcarver"><img src="./React App_files/Stonecarver.35e19996.svg" alt="Stonecarver"><img src="./React App_files/_Tinker.562378e1.svg" alt=" Tinker"><img src="./React App_files/Tailor.341ff77c.svg" alt="Tailor"><img src="./React App_files/Potter.e38da1f5.svg" alt="Potter"></div><div class="Card__holder__friends">Friends: <span>Cogwitz Chillwidget</span><span>, Tinadette Chillbuster</span></div></div></div><div class="Card"><div class="Card__imgholder"><img src="./React App_files/white-hen.jpg" alt="Fizkin Voidbuster"></div><div class="Card__holder"><div class="Card__holder__name">Fizkin Voidbuster</div><div class="Card__holder__age">Age: 288</div><div class="Card__holder__weight">Weight: 35.3 Kg</div><div class="Card__holder__height">Height: 1.10 m</div><div class="Card__holder__hair"><div class="Card__holder__hair__text">Hair color: </div><div class="Card__holder__hair__color" style="background-color: green;"></div></div><div class="Card__holder__break"></div><div class="Card__holder__icons"><img src="./React App_files/Brewer.a2b5faeb.svg" alt="Brewer"><img src="./React App_files/Medic.c427a113.svg" alt="Medic"><img src="./React App_files/Prospector.15e4e63d.svg" alt="Prospector"><img src="./React App_files/Gemcutter.761a23e5.svg" alt="Gemcutter"><img src="./React App_files/Mason.47627ee4.svg" alt="Mason"><img src="./React App_files/Tailor.341ff77c.svg" alt="Tailor"></div><div></div></div></div><div class="Card"><div class="Card__imgholder"><img src="./React App_files/maple-leaves-background.jpg" alt="Malbin Chromerocket"></div><div class="Card__holder"><div class="Card__holder__name">Malbin Chromerocket</div><div class="Card__holder__age">Age: 166</div><div class="Card__holder__weight">Weight: 35.9 Kg</div><div class="Card__holder__height">Height: 1.06 m</div><div class="Card__holder__hair"><div class="Card__holder__hair__text">Hair color: </div><div class="Card__holder__hair__color" style="background-color: red;"></div></div><div class="Card__holder__break"></div><div class="Card__holder__icons"><img src="./React App_files/Cook.d465c828.svg" alt="Cook"><img src="./React App_files/Baker.5f4761a0.svg" alt="Baker"><img src="./React App_files/Miner.9e637700.svg" alt="Miner"></div><div class="Card__holder__friends">Friends: <span>Fizwood Voidtossle</span></div></div></div><div class="Card"><div class="Card__imgholder"><img src="./React App_files/1-1275919724d1Oh.jpg" alt="Midwig Gyroslicer"></div><div class="Card__holder"><div class="Card__holder__name">Midwig Gyroslicer</div><div class="Card__holder__age">Age: 240</div><div class="Card__holder__weight">Weight: 41.0 Kg</div><div class="Card__holder__height">Height: 1.28 m</div><div class="Card__holder__hair"><div class="Card__holder__hair__text">Hair color: </div><div class="Card__holder__hair__color" style="background-color: red;"></div></div><div class="Card__holder__break"></div><div class="Card__holder__icons"><img src="./React App_files/Carpenter.5dccb48f.svg" alt="Carpenter"><img src="./React App_files/Farmer.369c23ef.svg" alt="Farmer"><img src="./React App_files/Stonecarver.35e19996.svg" alt="Stonecarver"><img src="./React App_files/Brewer.a2b5faeb.svg" alt="Brewer"><img src="./React App_files/Tax inspector.a851d941.svg" alt="Tax inspector"><img src="./React App_files/Prospector.15e4e63d.svg" alt="Prospector"></div><div class="Card__holder__friends">Friends: <span>Sarabink Tinkbuster</span><span>, Tinadette Wrongslicer</span></div></div></div><div class="Card"><div class="Card__imgholder"><img src="./React App_files/zebra-head-11281366876AZ3M.jpg" alt="Malbin Magnaweaver"></div><div class="Card__holder"><div class="Card__holder__name">Malbin Magnaweaver</div><div class="Card__holder__age">Age: 89</div><div class="Card__holder__weight">Weight: 43.5 Kg</div><div class="Card__holder__height">Height: 1.02 m</div><div class="Card__holder__hair"><div class="Card__holder__hair__text">Hair color: </div><div class="Card__holder__hair__color" style="background-color: black;"></div></div><div class="Card__holder__break"></div><div class="Card__holder__icons"><img src="./React App_files/Smelter.e379e50c.svg" alt="Smelter"><img src="./React App_files/_Tinker.562378e1.svg" alt=" Tinker"></div><div class="Card__holder__friends">Friends: <span>Fizkin Fussslicer</span><span>, Cogwitz Chillwidget</span></div></div></div><div class="Card"><div class="Card__imgholder"><img src="./React App_files/1-1193219094.jpg" alt="Zedkin Quickbuster"></div><div class="Card__holder"><div class="Card__holder__name">Zedkin Quickbuster</div><div class="Card__holder__age">Age: 273</div><div class="Card__holder__weight">Weight: 38.7 Kg</div><div class="Card__holder__height">Height: 0.92 m</div><div class="Card__holder__hair"><div class="Card__holder__hair__text">Hair color: </div><div class="Card__holder__hair__color" style="background-color: red;"></div></div><div class="Card__holder__break"></div><div class="Card__holder__icons"><img src="./React App_files/Cook.d465c828.svg" alt="Cook"></div><div class="Card__holder__friends">Friends: <span>Libalia Quickbooster</span><span>, Whitwright Mystwhistle</span></div></div></div><div class="Card"><div class="Card__imgholder"><img src="./React App_files/stingray.jpg" alt="Emmadette Gimbalpower"></div><div class="Card__holder"><div class="Card__holder__name">Emmadette Gimbalpower</div><div class="Card__holder__age">Age: 212</div><div class="Card__holder__weight">Weight: 40.7 Kg</div><div class="Card__holder__height">Height: 0.99 m</div><div class="Card__holder__hair"><div class="Card__holder__hair__text">Hair color: </div><div class="Card__holder__hair__color" style="background-color: green;"></div></div><div class="Card__holder__break"></div><div class="Card__holder__icons"><img src="./React App_files/Mason.47627ee4.svg" alt="Mason"></div><div class="Card__holder__friends">Friends: <span>Ecki Gyrobuster</span><span>, Zedkin Nozzlespackle</span><span>, Milli Clankswhistle</span><span>, Libalia Magnatink</span></div></div></div><div class="Card"><div class="Card__imgholder"><img src="./React App_files/1-1275919724d1Oh.jpg" alt="Twizzle Chrometossle"></div><div class="Card__holder"><div class="Card__holder__name">Twizzle Chrometossle</div><div class="Card__holder__age">Age: 85</div><div class="Card__holder__weight">Weight: 39.0 Kg</div><div class="Card__holder__height">Height: 0.96 m</div><div class="Card__holder__hair"><div class="Card__holder__hair__text">Hair color: </div><div class="Card__holder__hair__color" style="background-color: red;"></div></div><div class="Card__holder__break"></div><div class="Card__holder__icons"><img src="./React App_files/Baker.5f4761a0.svg" alt="Baker"><img src="./React App_files/Brewer.a2b5faeb.svg" alt="Brewer"><img src="./React App_files/Tax inspector.a851d941.svg" alt="Tax inspector"></div><div class="Card__holder__friends">Friends: <span>Libalia Mystbooster</span><span>, Zedkin Gyrotorque</span></div></div></div><div class="Card"><div class="Card__imgholder"><img src="./React App_files/1-1248161543llOC.jpg" alt="Malbert Tinkbuster"></div><div class="Card__holder"><div class="Card__holder__name">Malbert Tinkbuster</div><div class="Card__holder__age">Age: 186</div><div class="Card__holder__weight">Weight: 41.2 Kg</div><div class="Card__holder__height">Height: 1.18 m</div><div class="Card__holder__hair"><div class="Card__holder__hair__text">Hair color: </div><div class="Card__holder__hair__color" style="background-color: gray;"></div></div><div class="Card__holder__break"></div><div class="Card__holder__icons"><img src="./React App_files/Baker.5f4761a0.svg" alt="Baker"><img src="./React App_files/Mason.47627ee4.svg" alt="Mason"></div><div></div></div></div><div class="Card"><div class="Card__imgholder"><img src="./React App_files/baby-lamb.jpg" alt="Kinthony Nozzlebooster"></div><div class="Card__holder"><div class="Card__holder__name">Kinthony Nozzlebooster</div><div class="Card__holder__age">Age: 233</div><div class="Card__holder__weight">Weight: 41.0 Kg</div><div class="Card__holder__height">Height: 1.14 m</div><div class="Card__holder__hair"><div class="Card__holder__hair__text">Hair color: </div><div class="Card__holder__hair__color" style="background-color: red;"></div></div><div class="Card__holder__break"></div><div class="Card__holder__icons"><img src="./React App_files/Smelter.e379e50c.svg" alt="Smelter"><img src="./React App_files/Miner.9e637700.svg" alt="Miner"><img src="./React App_files/Tax inspector.a851d941.svg" alt="Tax inspector"><img src="./React App_files/Carpenter.5dccb48f.svg" alt="Carpenter"></div><div class="Card__holder__friends">Friends: <span>Zedkin Clankstorque</span><span>, Midwig Magnarivet</span></div></div></div><div class="Card"><div class="Card__imgholder"><img src="./React App_files/baby-lamb.jpg" alt="Cogwitz Nozzleratchet"></div><div class="Card__holder"><div class="Card__holder__name">Cogwitz Nozzleratchet</div><div class="Card__holder__age">Age: 125</div><div class="Card__holder__weight">Weight: 35.8 Kg</div><div class="Card__holder__height">Height: 0.99 m</div><div class="Card__holder__hair"><div class="Card__holder__hair__text">Hair color: </div><div class="Card__holder__hair__color" style="background-color: red;"></div></div><div class="Card__holder__break"></div><div class="Card__holder__icons"><img src="./React App_files/Butcher.2f2e0b8a.svg" alt="Butcher"><img src="./React App_files/Farmer.369c23ef.svg" alt="Farmer"><img src="./React App_files/Sculptor.48649b0f.svg" alt="Sculptor"><img src="./React App_files/Metalworker.a2bab202.svg" alt="Metalworker"><img src="./React App_files/Baker.5f4761a0.svg" alt="Baker"><img src="./React App_files/Smelter.e379e50c.svg" alt="Smelter"><img src="./React App_files/Tax inspector.a851d941.svg" alt="Tax inspector"></div><div></div></div></div><div class="Card"><div class="Card__imgholder"><img src="./React App_files/1-12445363126Swx.jpg" alt="Malbert Quicklauncher"></div><div class="Card__holder"><div class="Card__holder__name">Malbert Quicklauncher</div><div class="Card__holder__age">Age: 169</div><div class="Card__holder__weight">Weight: 37.9 Kg</div><div class="Card__holder__height">Height: 1.19 m</div><div class="Card__holder__hair"><div class="Card__holder__hair__text">Hair color: </div><div class="Card__holder__hair__color" style="background-color: pink;"></div></div><div class="Card__holder__break"></div><div class="Card__holder__icons"><img src="./React App_files/Butcher.2f2e0b8a.svg" alt="Butcher"><img src="./React App_files/Miner.9e637700.svg" alt="Miner"><img src="./React App_files/Tax inspector.a851d941.svg" alt="Tax inspector"><img src="./React App_files/Blacksmith.ca12de24.svg" alt="Blacksmith"><img src="./React App_files/_Tinker.562378e1.svg" alt=" Tinker"><img src="./React App_files/Baker.5f4761a0.svg" alt="Baker"><img src="./React App_files/Potter.e38da1f5.svg" alt="Potter"></div><div class="Card__holder__friends">Friends: <span>Twizzle Fusswidget</span><span>, Midwig Magnawidget</span><span>, Emmadette Chromerocket</span></div></div></div><div class="Card"><div class="Card__imgholder"><img src="./React App_files/zebra-head-11281366876AZ3M.jpg" alt="Ecki Fussspackle"></div><div class="Card__holder"><div class="Card__holder__name">Ecki Fussspackle</div><div class="Card__holder__age">Age: 260</div><div class="Card__holder__weight">Weight: 44.9 Kg</div><div class="Card__holder__height">Height: 0.94 m</div><div class="Card__holder__hair"><div class="Card__holder__hair__text">Hair color: </div><div class="Card__holder__hair__color" style="background-color: black;"></div></div><div class="Card__holder__break"></div><div class="Card__holder__icons"></div><div class="Card__holder__friends">Friends: <span>Kinthony Tinkslicer</span><span>, Fizwood Chillrivet</span></div></div></div><div class="Card"><div class="Card__imgholder"><img src="./React App_files/cactus-1430656432Iug.jpg" alt="Tobus Nozzletink"></div><div class="Card__holder"><div class="Card__holder__name">Tobus Nozzletink</div><div class="Card__holder__age">Age: 367</div><div class="Card__holder__weight">Weight: 36.7 Kg</div><div class="Card__holder__height">Height: 1.29 m</div><div class="Card__holder__hair"><div class="Card__holder__hair__text">Hair color: </div><div class="Card__holder__hair__color" style="background-color: green;"></div></div><div class="Card__holder__break"></div><div class="Card__holder__icons"><img src="./React App_files/_Tinker.562378e1.svg" alt=" Tinker"><img src="./React App_files/Metalworker.a2bab202.svg" alt="Metalworker"><img src="./React App_files/Carpenter.5dccb48f.svg" alt="Carpenter"></div><div class="Card__holder__friends">Friends: <span>Milli Clanksbuster</span><span>, Kinthony Tinkrivet</span><span>, Sarabink Voidbuster</span><span>, Tobus Nozzletorque</span></div></div></div><div class="Card"><div class="Card__imgholder"><img src="./React App_files/1-1229281026TsmM.jpg" alt="Emmadette Quickrocket"></div><div class="Card__holder"><div class="Card__holder__name">Emmadette Quickrocket</div><div class="Card__holder__age">Age: 330</div><div class="Card__holder__weight">Weight: 44.4 Kg</div><div class="Card__holder__height">Height: 0.93 m</div><div class="Card__holder__hair"><div class="Card__holder__hair__text">Hair color: </div><div class="Card__holder__hair__color" style="background-color: black;"></div></div><div class="Card__holder__break"></div><div class="Card__holder__icons"><img src="./React App_files/Tax inspector.a851d941.svg" alt="Tax inspector"></div><div class="Card__holder__friends">Friends: <span>Malbin Magnatink</span><span>, Fizwood Switchbooster</span></div></div></div><div class="Card"><div class="Card__imgholder"><img src="./React App_files/1-1213888416aeXz.jpg" alt="Tobus Bitterlauncher"></div><div class="Card__holder"><div class="Card__holder__name">Tobus Bitterlauncher</div><div class="Card__holder__age">Age: 181</div><div class="Card__holder__weight">Weight: 35.6 Kg</div><div class="Card__holder__height">Height: 1.26 m</div><div class="Card__holder__hair"><div class="Card__holder__hair__text">Hair color: </div><div class="Card__holder__hair__color" style="background-color: gray;"></div></div><div class="Card__holder__break"></div><div class="Card__holder__icons"><img src="./React App_files/Blacksmith.ca12de24.svg" alt="Blacksmith"><img src="./React App_files/Mason.47627ee4.svg" alt="Mason"><img src="./React App_files/Miner.9e637700.svg" alt="Miner"><img src="./React App_files/Tailor.341ff77c.svg" alt="Tailor"><img src="./React App_files/Brewer.a2b5faeb.svg" alt="Brewer"><img src="./React App_files/Tax inspector.a851d941.svg" alt="Tax inspector"></div><div class="Card__holder__friends">Friends: <span>Tinadette Gyrorocket</span></div></div></div><div class="Card"><div class="Card__imgholder"><img src="./React App_files/1-1275897675Dsss.jpg" alt="Libalia Chillgrill"></div><div class="Card__holder"><div class="Card__holder__name">Libalia Chillgrill</div><div class="Card__holder__age">Age: 45</div><div class="Card__holder__weight">Weight: 42.6 Kg</div><div class="Card__holder__height">Height: 1.22 m</div><div class="Card__holder__hair"><div class="Card__holder__hair__text">Hair color: </div><div class="Card__holder__hair__color" style="background-color: gray;"></div></div><div class="Card__holder__break"></div><div class="Card__holder__icons"><img src="./React App_files/Tax inspector.a851d941.svg" alt="Tax inspector"><img src="./React App_files/Sculptor.48649b0f.svg" alt="Sculptor"><img src="./React App_files/Baker.5f4761a0.svg" alt="Baker"><img src="./React App_files/Carpenter.5dccb48f.svg" alt="Carpenter"><img src="./React App_files/Gemcutter.761a23e5.svg" alt="Gemcutter"></div><div class="Card__holder__friends">Friends: <span>Whitwright Gyroweaver</span><span>, Minabonk Bitterpiston</span><span>, Sarabink Gyrotossle</span></div></div></div><div class="Card"><div class="Card__imgholder"><img src="./React App_files/snowy-owl-11294429170yBc.jpg" alt="Whitwright Magnaspackle"></div><div class="Card__holder"><div class="Card__holder__name">Whitwright Magnaspackle</div><div class="Card__holder__age">Age: 376</div><div class="Card__holder__weight">Weight: 37.3 Kg</div><div class="Card__holder__height">Height: 1.22 m</div><div class="Card__holder__hair"><div class="Card__holder__hair__text">Hair color: </div><div class="Card__holder__hair__color" style="background-color: pink;"></div></div><div class="Card__holder__break"></div><div class="Card__holder__icons"><img src="./React App_files/Stonecarver.35e19996.svg" alt="Stonecarver"><img src="./React App_files/Blacksmith.ca12de24.svg" alt="Blacksmith"><img src="./React App_files/Potter.e38da1f5.svg" alt="Potter"><img src="./React App_files/Prospector.15e4e63d.svg" alt="Prospector"><img src="./React App_files/Tailor.341ff77c.svg" alt="Tailor"><img src="./React App_files/_Tinker.562378e1.svg" alt=" Tinker"><img src="./React App_files/Gemcutter.761a23e5.svg" alt="Gemcutter"></div><div class="Card__holder__friends">Friends: <span>Sarabink Quickbooster</span><span>, Libalia Bitterpower</span></div></div></div><div class="Card"><div class="Card__imgholder"><img src="./React App_files/squirrel-in-winter-11298746828jAB.jpg" alt="Minabonk Voidslicer"></div><div class="Card__holder"><div class="Card__holder__name">Minabonk Voidslicer</div><div class="Card__holder__age">Age: 252</div><div class="Card__holder__weight">Weight: 39.6 Kg</div><div class="Card__holder__height">Height: 1.13 m</div><div class="Card__holder__hair"><div class="Card__holder__hair__text">Hair color: </div><div class="Card__holder__hair__color" style="background-color: red;"></div></div><div class="Card__holder__break"></div><div class="Card__holder__icons"><img src="./React App_files/Smelter.e379e50c.svg" alt="Smelter"><img src="./React App_files/Tax inspector.a851d941.svg" alt="Tax inspector"><img src="./React App_files/Mason.47627ee4.svg" alt="Mason"></div><div class="Card__holder__friends">Friends: <span>Midwig Tinkblade</span><span>, Ecki Mysttossle</span><span>, Cogwitz Gyroratchet</span><span>, Midwig Wrongblade</span></div></div></div><div class="Card"><div class="Card__imgholder"><img src="./React App_files/scarlet-macaw.jpg" alt="Fizkin Switchbuster"></div><div class="Card__holder"><div class="Card__holder__name">Fizkin Switchbuster</div><div class="Card__holder__age">Age: 280</div><div class="Card__holder__weight">Weight: 43.6 Kg</div><div class="Card__holder__height">Height: 1.09 m</div><div class="Card__holder__hair"><div class="Card__holder__hair__text">Hair color: </div><div class="Card__holder__hair__color" style="background-color: pink;"></div></div><div class="Card__holder__break"></div><div class="Card__holder__icons"><img src="./React App_files/Prospector.15e4e63d.svg" alt="Prospector"><img src="./React App_files/Brewer.a2b5faeb.svg" alt="Brewer"><img src="./React App_files/Mason.47627ee4.svg" alt="Mason"><img src="./React App_files/Mechanic.27a39cd0.svg" alt="Mechanic"></div><div class="Card__holder__friends">Friends: <span>Emmadette Gyrobooster</span></div></div></div></div><div class="Search"><input type="text" name="search" placeholder="Find a gnome..."><div class="Search__container"><img src="./React App_files/search.ebd24296.svg" alt="search"></div></div></div></div></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <script src="./React App_files/bundle.js"></script><script src="./React App_files/0.chunk.js"></script><script src="./React App_files/main.chunk.js"></script><script src="./React App_files/main.9bc8f107dc235ca0e877.hot-update.js"></script>
+
+</body><loom-container id="lo-engage-ext-container"><loom-shadow classname="resolved"></loom-shadow></loom-container></html>

@@ -1,0 +1,38 @@
+/* * {
+  border: solid 1px black;
+} */
+
+.Filters {
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Filters__button {
+  width: 100%;
+  height: 10vh;
+  font-size: 15px;
+  outline: none;
+  border: none;
+  line-height: 10vh;
+  vertical-align: middle;
+}
+
+.Filters__button img {
+  margin-right: 10px;
+}
+
+.Filters__button__images {
+  height: 20px;
+}
+
+.Filter__filter {
+  margin: 10px;
+  height: 5vh;
+  font-size: 20px;
+  background-color: white;
+  border: solid 1px black;
+  outline: none;
+}

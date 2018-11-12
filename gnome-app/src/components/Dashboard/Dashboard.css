@@ -1,0 +1,11 @@
+.Dashboard {
+  overflow: scroll;
+  height: 90vh;
+}
+
+.Dashboard__empty {
+  margin: 5vh;
+  text-align: center;
+  color: gray;
+  font-size: 1.5em;
+}

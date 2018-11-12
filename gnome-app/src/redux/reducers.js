@@ -1,6 +1,8 @@
 import * as types from './types';
 const initialState = {
-  gnomes: []
+  gnomes: [],
+  search: '',
+  filters: []
 };
 
 const reducer = (state = initialState, action) => {
@@ -11,6 +13,17 @@ const reducer = (state = initialState, action) => {
         gnomes: action.payload.Brastlewark
       };
 
+    case types.SEARCH_GNOMES:
+      return {
+        ...state,
+        search: action.payload
+      };
+
+    case types.SET_FILTER:
+      return {
+        ...state,
+        filters: { ...state.filters, ...action.payload }
+      };
     default:
       return state;
   }

@@ -1,22 +1,66 @@
-.Card__holder {
-  width: 100vw;
-  height: 30vh;
+.Card {
+  box-shadow: -3px 3px 10px -2px rgba(0, 0, 0, 0.75);
+  margin: auto auto;
+  width: 90vw;
+  height: fit-content;
+  margin: 2.5vh;
+  border-radius: 2vh;
   overflow: hidden;
-  vertical-align: middle;
-  margin-bottom: 5vh;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+}
+
+.Card__imgholder {
+  margin: auto;
+  height: 100px;
+  overflow: hidden;
+}
+
+.Card__imgholder img {
+  width: 90vw;
+  position: relative;
+  top: -50%;
+}
+
+.Card__holder {
+  padding: 2%;
+  width: 100vw;
+  height: 100%;
 }
 
 .Card__holder__name {
-  padding: 2%;
-  width: 100vw;
-  height: 10vh;
-  background-color: black;
-  position: relative;
-  top: 20vh;
-  opacity: 0.5;
-  color: white;
   font-size: 1.2em;
+  font-weight: bold;
+}
+
+.Card__holder__age,
+.Card__holder__weight,
+.Card__holder__height,
+.Card__holder__hair__text,
+.Card__holder__friends {
+  font-size: 0.8em;
+  width: 80%;
+}
+
+.Card__holder__hair {
+  display: flex;
+  flex-direction: row;
+}
+
+.Card__holder__hair__text {
+  width: fit-content;
+}
+
+.Card__holder__hair__color {
+  width: 1em;
+  margin-left: 5px;
+}
+
+.Card__holder__break {
+  border-bottom: solid 1px rgb(211, 211, 211);
+  margin-top: 5px;
+  width: 85vw;
+}
+
+.Card__holder__icons img {
+  width: 20px;
+  padding: 5px;
 }

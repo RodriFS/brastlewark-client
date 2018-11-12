@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import Navbar from './components/Navbar';
-import Dashboard from './containers/Dashboard';
+import DashboardContainer from './containers/DashboardContainer';
 import { connect } from 'react-redux';
 import { getGnomes } from './redux/actions';
+import { Route, withRouter } from 'react-router-dom';
+import Filters from './components/Filters';
 import './App.css';
 
 class App extends Component {
@@ -24,8 +25,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Navbar />
-        <Dashboard />
+        <Route exact path="/" component={DashboardContainer} />
+        <Route path="/filters" component={Filters} />
       </div>
     );
   }
@@ -39,7 +40,9 @@ const mapDispatchToProps = {
   getGnomes
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(App);
+export default withRouter(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(App)
+);

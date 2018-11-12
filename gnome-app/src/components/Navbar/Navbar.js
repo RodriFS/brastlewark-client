@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import './Navbar.css';
 import filter from '../../assets/filter.svg';
-import search from '../../assets/search.svg';
+import { Link } from 'react-router-dom';
 
 class Navbar extends Component {
   render() {
     return (
       <div className="Navbar">
-        <img src={filter} alt="to menu" className="Navbar__toMenu" />
-        <div className="Navbar__title">Gnomes</div>
-        <img src={search} alt="search" className="Navbar__search" />
+        <Link to="/filters">
+          <img src={filter} alt="to filter" className="Navbar__toFilter" />
+        </Link>
+        <div className="Navbar__title">Welcome to Brastlewark</div>
       </div>
     );
   }
