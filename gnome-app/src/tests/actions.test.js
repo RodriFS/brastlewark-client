@@ -1,11 +1,8 @@
 import configureStore from 'redux-mock-store';
-import Enzyme from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
 import { FETCH_GNOMES, SEARCH_GNOMES, SET_FILTER } from '../redux/types';
 import { getGnomes, searchGnomes, setFilter } from '../redux/actions';
 import * as mocks from './mocks';
 
-Enzyme.configure({ adapter: new Adapter() });
 const mockStore = configureStore();
 const store = mockStore();
 
