@@ -27,8 +27,8 @@ class Dashboard extends Component {
   }
 
   render() {
+    // show only a fraction of the gnomes
     let gnomes = this.props.gnomes.slice(0, this.state.fetchNumber);
-    console.log(this.props.gnomes.length);
 
     return (
       <div

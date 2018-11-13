@@ -1,5 +1,7 @@
 const filteredGnomes = state => {
+  if (!state.filters || !state.gnomes) return [];
   let filters = Object.keys(state.filters).filter(el => state.filters[el]);
+
   // fiter by filters
   return (
     state.gnomes

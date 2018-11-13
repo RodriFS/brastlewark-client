@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import './Filters.css';
 
 class Filters extends Component {
+  // set filters in redux store
   handleClick = prof => {
     !this.props.filters[prof]
       ? this.props.setFilter({ [prof]: true })
