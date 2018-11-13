@@ -2,7 +2,7 @@
 
 ## Getting started
 
-1. Clone the repo
+1. Clone the repo and enter gnome-app
 2. install the dependencies `npm i`
 3. run the app! `npm start`
 4. run the tests `npm test`
