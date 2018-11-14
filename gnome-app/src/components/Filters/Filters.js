@@ -1,18 +1,31 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import { getProfessions } from '../../utils/professions';
-import { setFilter } from '../../redux/actions';
 import { Link } from 'react-router-dom';
 import './Filters.css';
 
+/**
+ * @file gnome-app/src/containers/Filters.js
+ * @class Filters
+ * @extends React.Component
+ * @classdesc This is the Filters component. It displays all the filters you can apply to the gnomes object.
+ * @since v1.0
+ * @author @rodrifs <rodrifs@gmail.com>
+ * <Filters />
+ */
 class Filters extends Component {
-  // set filters in redux store
   handleClick = prof => {
     !this.props.filters[prof]
       ? this.props.setFilter({ [prof]: true })
       : this.props.setFilter({ [prof]: false });
   };
 
+  /**
+   * @function
+   * @name render
+   * @memberof Filters
+   * @description Maps and renders all filters
+   * @return {JSX} Components for Filters
+   */
   render() {
     let AllProfs = getProfessions(this.props.gnomes);
     return (
@@ -47,16 +60,4 @@ class Filters extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  gnomes: state.gnomes,
-  filters: state.filters
-});
-
-const mapDispatchToProps = {
-  setFilter
-};
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Filters);
+export default Filters;

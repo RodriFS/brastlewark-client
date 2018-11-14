@@ -1,10 +1,26 @@
+/**
+ * @name Profile Reducer
+ * @memberof module:redux/reducers
+ * @type {ReduxReducer}
+ * @return {Object} Reducer Specification
+ */
 import * as types from './types';
+
 const initialState = {
   gnomes: [],
   search: '',
   filters: []
 };
 
+/**
+ * @function
+ * @name reducer
+ * @memberof module:redux/reducers
+ * @description reduces actions into the state
+ * @param {Object} state  - reducer state
+ * @param {Object} action - action context
+ * @return {OBJECT} Action context
+ */
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case types.FETCH_GNOMES:

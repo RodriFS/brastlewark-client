@@ -1,3 +1,10 @@
+/**
+ * @function
+ * @name getProfessions
+ * @description get all common professions from all gnomes
+ * @param  {Array} gnomes - all gnomes
+ * @return  {Array} - professions
+ */
 const getProfessions = gnomes => {
   let professions = [];
   gnomes.forEach(gnome => {

@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
 import Card from '../../components/Card';
 import Placeholder from '../../components/Placeholder';
-import { connect } from 'react-redux';
 import LazyLoad from 'react-lazyload';
-import { filteredGnomes } from '../../redux/selectors';
 import './Dashboard.css';
 
+/**
+ * @file gnome-app/src/components/Dashboard.js
+ * @class Dashboard
+ * @extends React.Component
+ * @classdesc This is de Dashboard component. Maps and renders all Card components.
+ * @since v1.0
+ * @author @rodrifs <rodrifs@gmail.com>
+ * <Dashboard />
+ */
 class Dashboard extends Component {
   constructor(props) {
     super(props);
@@ -17,15 +24,27 @@ class Dashboard extends Component {
     this.state = { fetchNumber: 20 };
   }
 
+  /**
+   * @function
+   * @name fetchMore
+   * @memberof Dashboard
+   * @description Check if the scroll position is more than 80%, if so, add more elements to the array
+   * @return {Void}
+   */
   fetchMore(ref) {
-    // check if the scroll position is more than 80%, if so, add more
-    // elements to the array
     if (ref.current.scrollTop / ref.current.scrollHeight > 0.8) {
       let fetchNumber = this.state.fetchNumber + 20;
       this.setState({ fetchNumber });
     }
   }
 
+  /**
+   * @function
+   * @name render
+   * @memberof Dashboard
+   * @description Renders Card components
+   * @return {JSX} Components for Dashboard
+   */
   render() {
     // show only a fraction of the gnomes
     let gnomes = this.props.gnomes.slice(0, this.state.fetchNumber);
@@ -54,9 +73,4 @@ class Dashboard extends Component {
     );
   }
 }
-
-const mapStateToProps = state => ({
-  gnomes: filteredGnomes(state)
-});
-
-export default connect(mapStateToProps)(Dashboard);
+export default Dashboard;

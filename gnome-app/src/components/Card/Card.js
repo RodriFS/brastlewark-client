@@ -1,9 +1,23 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { searchGnomes } from '../../redux/actions';
 import './Card.css';
 
+/**
+ * @file gnome-app/src/components/Card.js
+ * @class Card
+ * @extends React.Component
+ * @classdesc This is de Card component. Displays gnomes Card details.
+ * @since v1.0
+ * @author @rodrifs <rodrifs@gmail.com>
+ * <Card />
+ */
 class Card extends Component {
+  /**
+   * @function
+   * @name render
+   * @memberof Card
+   * @description Renders all gnome data in one Card.
+   * @return {JSX} Components for Card
+   */
   render() {
     const {
       name,
@@ -75,11 +89,4 @@ class Card extends Component {
   }
 }
 
-const mapDispatchToProps = {
-  searchGnomes
-};
-
-export default connect(
-  null,
-  mapDispatchToProps
-)(Card);
+export default Card;
