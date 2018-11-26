@@ -27,8 +27,11 @@ class DashboardContainer extends Component {
     return (
       <div className="DashboardContainer">
         <Navbar />
-        <Dashboard gnomes={this.props.filteredgnomes} />
-        <Search searchGnomes={searchGnomes} />
+        <Dashboard
+          gnomes={this.props.filteredgnomes}
+          searchGnomes={this.props.searchGnomes}
+        />
+        <Search />
       </div>
     );
   }

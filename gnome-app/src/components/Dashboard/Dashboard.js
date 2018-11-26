@@ -48,6 +48,7 @@ class Dashboard extends Component {
   render() {
     // show only a fraction of the gnomes
     let gnomes = this.props.gnomes.slice(0, this.state.fetchNumber);
+    console.log(this.props);
 
     return (
       <div
@@ -63,7 +64,11 @@ class Dashboard extends Component {
               overflow={true}
               placeholder={<Placeholder />}
             >
-              <Card key={gnome.id} gnome={gnome} />
+              <Card
+                key={gnome.id}
+                gnome={gnome}
+                searchGnomes={this.props.searchGnomes}
+              />
             </LazyLoad>
           ))
         ) : (
